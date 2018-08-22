@@ -1,53 +1,4 @@
-#include<stdio.h>
-void fun(int c[100])
-{
-	int a;
-	int i,j;
-	for(a=6;a<=106;a=a+2)
-	{
-		for(i=0;i<=100;i++)
-		{
-			int flag = 0;
-			for(j=i;j<=100;j++){
-				if(c[i]+c[j]==a)
-				{
-					printf("%d=%d+%d\n",a,c[i],c[j]);
-					flag = 1;
-					break;
-				}
-			}
-			if(flag == 1)
-				break;
 
-		}
-	
-	}
-} 
-int main()
-{
-	int c[100];
-	int i,a,b,t;
-	i=0;
-	for(a=2;a<=106;a++)
-	{
-		t=1;
-		for(b=2;b<=a-1;b++)
-		{
-			if(a%b==0)
-			{
-				t=0;
-				break;
-			}
-		}
-		if(t==1)
-		{
-		i++;
-		c[i]=a;
-		}
-	}
-	fun(c);
-   return 0; 
-}
 
 
 
@@ -79,7 +30,8 @@ void DotB_Convert(double b)
 	double f,c,k,j,d,g,h;
 	x=0;i=1;d=0,j=0.015625;
 	a=(int)b;
-	c=b-a;
+	g=(double)a;
+	c=b-g;
 	printf("%lf\n",c);
 	k=c*1000000;
 	z=(int)k;

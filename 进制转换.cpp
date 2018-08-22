@@ -37,7 +37,6 @@ char p[100];
 //由于是返回char类型指针，所以要定义一个全局变量p[100] 
 char * BtoD_Convert(double  number){
 	 //分为整数部分和小数部分
-	 //找到小数点位置 
 	 int num = (int)number;
 	 double dotnum = number - num;
 
@@ -47,7 +46,7 @@ char * BtoD_Convert(double  number){
 	 	p[index ++] = num%2+48; //整型0与'0'相差48 
 	 	num = num/2;
 	 }while(num!=0) ;
-	 //由于是逆序存放小数部分，所以要现将其调转一下顺序
+	 //由于是逆序存放整数部分，所以要现将其调转一下顺序
 	 for(int i = 0; i < index /2; ++i){
 	 	char temp = p[i];
 	 	p[i] = p[index - i-1];
